@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>OMEGA CPXRJ</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/2style.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-bottom: 140px;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            background: #09ad7e59;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px #09ad7e;
+            max-width: 1300px;
+            margin: auto;
+            margin-top: 80px;
+            transition: transform 0.3s;
+        }
+
+        .form-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #000000;
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #09ad7e91;
+            box-shadow: 0 2px 15px #09ad7e;
+            border-radius: 6px;
+            transition: border 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #03f73c;
+            outline: none;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+                box-shadow: 0 2px 15px #09ad7e;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent" style="padding: 50px;" id="navBar">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/LOGO_3.png" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">OMEGA</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link">Calc. Bancada</a>
+                        <a href="calcMuniSell.html" class="nav-item nav-link">Calc. Vendas</a>
+                        <a href="calendar.html" class="nav-item nav-link">Calendário</a>
+                        <a href="loja.html" class="nav-item nav-link active">Loja</a>
+                        <a href="Rank.html" class="nav-item nav-link active">Rank</a>
+                        <a href="https://discord.gg/omegacpx" class="nav-item nav-link">Discord</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Utils</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="https://docs.google.com/document/d/1KLG1HAfuyHgcy_iAh_LmucQIAKH4c6zk1ptlHUZrT7I/edit?usp=sharing" class="dropdown-item">Regras Omega</a>
+                                <a href="https://docs.google.com/document/d/1XySUGouSX_v7_JbU94gTeucxiMRMD6ZkI4-NvG-I9Ks/edit?tab=t.0" class="dropdown-item">Regras Complexo</a>
+                                <a href="" class="dropdown-item">...</a>
+                                <a href="" class="dropdown-item">...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+   
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Resgate</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+           <en>
+            <header>
+                <h1>Finalizar Compra</h1>
+            </header>
+        
+
+        <div class="form-container">
+            <div class="form-section">
+                <h2>Formulário para Resgatar</h2>
+                <form id="contact-form" style="width: 100%; text-align: center;">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="form-footer">
+                    <p>Se precisar de ajuda, entre em contato com nosso suporte.</p>
+                </div>
+            </div>
+        
+            <div class="carrinho-embed">
+                <h2>Itens no Carrinho</h2>
+                <textarea id="carrinho" name="carrinho" rows="5" readonly></textarea>
+            </div>
+        </div>
+        
+        <style>
+            .form-container {
+                display: flex; /* Permite que os itens sejam alinhados lado a lado */
+                justify-content: center; /* Centraliza horizontalmente */
+                margin: 350; /* Removido para evitar espaço desnecessário */
+                padding: 50px 0; /* Padding para espaço acima e abaixo */
+            }
+        
+            .form-section {
+                flex: 0 0 800px; /* Define largura fixa de 500px para a embed do formulário */
+                height: auto; /* Ajuste automático da altura */
+                padding: 20px;
+                border-radius: 5px; /* Cantos arredondados */
+                margin-right: 20px; /* Espaço entre formulário e carrinho */
+            }
+        
+            .carrinho-embed {
+                flex: 0 0 400px; /* Define largura fixa de 500px para a embed do formulário */
+                height: 200px; /* Altura fixa para a embed do carrinho */
+                padding: 20px;
+                border-radius: 5px; /* Cantos arredondados */
+                border: 1px solid #09ad7e91;
+                box-shadow: 0 2px 15px #09ad7e;
+                display: flex; /* Flexbox para manter o alinhamento interno */
+                flex-direction: column; /* Alinha itens verticalmente */
+            }
+        
+            textarea {
+                width: 100%;
+                padding: 10px;
+                resize: none; /* Impede o redimensionamento */
+            }
+        </style>
+
+        
+        
+<!-- Botão para voltar ao carrinho ou cancelar a compra -->
+<div class="form-footer">
+    <button type="button" onclick="cancelarCompra()">Cancelar Compra</button>
+</div>
+
+<script>
+    function cancelarCompra() {
+        // Limpa os itens do carrinho
+        localStorage.removeItem('carrinho');
+        
+        // Redireciona para a página do carrinho
+        window.location.href = 'loja.html'; // Substitua pelo caminho correto do seu carrinho
+    }
+</script>
+
+
+        <script>
+            // Função para carregar os itens do carrinho no formulário
+            function carregarItensDoCarrinho() {
+                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+                const textareaCarrinho = document.getElementById('carrinho');
+        
+                if (carrinho.length > 0) {
+                    // Preenche o campo de itens com os itens do carrinho
+                    textareaCarrinho.value = carrinho.join(', ');
+                } else {
+                    textareaCarrinho.value = 'Carrinho vazio.';
+                }
+            }
+
+
+            // Chama a função ao carregar a página
+            window.onload = carregarItensDoCarrinho;
+        
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Previne o envio padrão do formulário
+                // Aqui você pode adicionar a lógica para enviar os dados do formulário (ex. AJAX)
+                // Simula o redirecionamento para a página de sucesso
+                window.location.href = 'sucesso.html';
+            });
+        </script>
+        
+        
+        <!-- Formulário para Resgatar -->
+     
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white-50 footer mt-5 wow fadeIn" data-wow-delay="0.1s" style="position: fixed; bottom: 0; right: 0;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Omega CPXRJ</a>, All Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Discord</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

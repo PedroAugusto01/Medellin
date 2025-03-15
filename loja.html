@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MEDELLIN CPXRJ</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/2style.css" rel="stylesheet">
+</head>
+
+<body style="padding-bottom: 140px;">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/LOGO_10.png" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">MEDELLIN</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link">Calc. Bancada</a>
+                        <a href="calcMuniSell.html" class="nav-item nav-link">Calc. Vendas</a>
+                        <a href="calendar.html" class="nav-item nav-link">Calendário</a>
+                        <a href="loja.html" class="nav-item nav-link active">Loja</a>
+                        <a href="Rank.html" class="nav-item nav-link active">Rank</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Utils</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="https://docs.google.com/document/d/1KLG1HAfuyHgcy_iAh_LmucQIAKH4c6zk1ptlHUZrT7I/edit?usp=sharing" class="dropdown-item">Regras Omega</a>
+                                <a href="https://docs.google.com/document/d/1XySUGouSX_v7_JbU94gTeucxiMRMD6ZkI4-NvG-I9Ks/edit?tab=t.0" class="dropdown-item">Regras Complexo</a>
+                                <a href="" class="dropdown-item">...</a>
+                                <a href="" class="dropdown-item">...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- INICIO DO CODIGO LOJA DE RESGATE -->
+        <html lang="pt-BR">
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+            <header>
+                <h1>Loja Pontos</h1>
+            </header>
+<en> <!-- Esta tag faz a quebra de linha -->
+
+
+            <div id="mensagem" class="mensagem"></div> <!-- Mensagem de confirmação -->
+
+            <main>
+                <section class="gallery">
+                    <div class="box">
+                     
+                        <img src="img/BRONZE.png" alt="Imagem 1">
+                        <p>BRONZE</p>
+                        <button onclick="mostrarDetalhes('BRONZE - Item 1','Detalhes sobre a Imagem 2'  )">Detalhes</button>
+                        <button onclick="adicionarAoCarrinho('BRONZE')">Carrinho</button>
+                    </div>
+                    <div class="box">
+                        <img src="img/PLATINA.png" alt="Imagem 2">
+                        <p>PLATINA</p>
+                        <button onclick="mostrarDetalhes('PLATINA', 'Detalhes sobre a Imagem 2')">Detalhes</button>
+                        <button onclick="adicionarAoCarrinho('PLATINA')">Carrinho</button>
+                    </div>
+                    <div class="box">
+                        <img src="img/OURO.png" alt="Imagem 3">
+                        <p>OURO</p>
+                        <button onclick="mostrarDetalhes('OURO', 'Detalhes sobre a Imagem 2')">Detalhes</button>
+                        <button onclick="adicionarAoCarrinho('OURO')">Carrinho</button>
+                    </div>
+                    <div class="box">
+                        <img src="img/MASTER.png" alt="Imagem 4">
+                        <p>MASTER</p>
+                        <button onclick="mostrarDetalhes('MASTER', 'Detalhes sobre a Imagem 2')">Detalhes</button>
+                        <button onclick="adicionarAoCarrinho('MASTER')">Carrinho</button>
+                    </div>
+                    <div class="box">
+                        <img src="img/SUPREMO.png">
+                        <p>MASTER SUPREMO</p>
+                        <button onclick="mostrarDetalhes('MASTER SUPREMO', 'Detalhes sobre a Imagem 2')">Detalhes</button>
+                        <button onclick="adicionarAoCarrinho('MASTER SUPREMO')">Carrinho</button>
+                    </div>
+                </section>
+        
+     <aside class="carrinho">
+                    <h2>Carrinho</h2>
+                    <ul id="carrinhoList"></ul>
+                    <button onclick="removerUltimoItem()">Remover Último Item</button>
+                    <button class="botao-remover" onclick="removerTodos()">Remover Todos os Itens</button>
+                     <button class="finalizar" onclick="finalizarCompra()">Comprar</button>
+                    <button class="finalizar" onclick="finalizarCompra()">Voltar a Finalizar Compra</button> 
+                </aside>
+            </main>
+        
+            <aside class="botoes">
+                <button onclick="window.location.href='https://docs.google.com/document/d/1KLG1HAfuyHgcy_iAh_LmucQIAKH4c6zk1ptlHUZrT7I/edit?tab=t.0'">Regras Loja</button>
+            </aside>
+        
+           
+            <script src="js/loja.js"></script>
+
+
+
+
+        
+        <!-- Modal -->
+
+    <div class="container-fluid nav-bar bg-transparent" style="padding: 50px;" id="navBar">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+            <a href="loja.html" class=" d-flex align-items-center text-center">
+
+
+      
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarDetalhes(titulo, descricao) {
+            document.getElementById('modal-title').innerText = titulo;
+            document.getElementById('modal-description').innerText = descricao;
+            document.getElementById('modal').style.display = "block";
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+
+        function resgatar(imagem) {
+            alert("Resgate solicitado para: " + imagem);
+        }
+
+        
+     // Carrega o carrinho ao abrir a página
+     window.onload = carregarCarrinho;
+     
+    </script>
+
+
+
+
+
+
+        
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer mt-5 wow fadeIn" data-wow-delay="0.1s" style="position: fixed; bottom: 0; right: 0;">
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Medellin CPXRJ</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Home</a>
+                        <a href="">Discord</a>
+                        <a href="">Help</a>
+                        <a href="">FQAs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
+

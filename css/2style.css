@@ -1,0 +1,319 @@
+
+
+/* Comando de resgate premiacao */
+.mensagem {
+    display: none;
+    background-color: #ffffff;
+    color: #09ad7e91;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 100px;
+    position: relative;
+    width: calc(50% - 10px);
+    top: 30px;
+    left: 450px;
+    z-index: 1000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Muda a cor de fundo da lista do carrinho */
+header {
+    box-shadow: 0 2px 15px #09ad7e;
+    background-color: #09ad7e38;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 80%;
+    max-width: 10000px;
+}
+
+/* Altera embed tamanho carrinho */
+main {
+    display: grid;
+    grid-template-columns: 4fr 300px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Código de lista da loja */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Embed loja */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Embed loja */
+.box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 15px #09ad7e;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.10);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.box button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #09ad7e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color: #218838;
+}
+
+/* Estilização do carrinho */
+.carrinho {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.carrinho ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrinho button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrinho button:hover {
+    background-color: #555;
+}
+
+.finalizar {
+    background-color: #28a745;
+}
+
+.finalizar:hover {
+    background-color: #218838;
+}
+
+/* Código novo do carrinho */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.carrinho {
+    width: 300px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.embed-container {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.carrinho button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.carrinho button:hover {
+    background-color: #218838;
+}
+
+/* Código resgate */
+#carrinhoList {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px #09ad7e91;
+    height: 100px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Novo código resgate */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botoes button {
+    padding: 10px;
+    background-color: #09ad7e91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.botoes button:hover {
+    background-color: #218838;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo, .botoes {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+/* Estilização dos itens do carrinho */
+.item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+}
+
+.botao-remover {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-remover:hover {
+    background-color: darkred;
+}
+
+.carrinho {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+.botao-remover, .finalizar {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.finalizar {
+    background-color: green;
+}
+
+.botao-remover:hover {
+    background-color: darkred;
+}
+
+.finalizar:hover {
+    background-color: darkgreen;
+}
+
+
