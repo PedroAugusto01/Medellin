@@ -126,10 +126,11 @@ function calculateTotal(isFarm = false) {
 function calculateFarmToMuni() {
     let item_price = []
     let item_farm = []
+    console.log("func 1")
     for(var item in result) {
         let itemHtml = "#"+result[item]['qtyCalcBancada']
         let priceHtml = "#"+result[item]['priceCalcBancada']
-        let itemValue = parseInt(((parseInt($(itemHtml).val() , 10) * (1 - (result[item]['porcentagemBancadaTrinta']/100))) / (result[item]['valorBancada'] / 10)), 10);
+        let itemValue = parseInt(((parseInt($(itemHtml).val() , 10) * valuePorcent) / (result[item]['valorBancada'] / 10)), 10);
         if (!isNaN(itemValue)) {
             item_price[item] = itemValue
             item_farm[item] = parseInt($(itemHtml).val() , 10)
@@ -150,11 +151,10 @@ function calculateFarmToMuni() {
 function calculateMuniToFarm() {
     let item_price = []
     let item_farm = []
-    console.log("func 2")
     for(var item in result) {
         let itemHtml = "#"+result[item]['qtyCalcBancada']
         let priceHtml = "#"+result[item]['priceCalcBancada']
-        let itemValue = parseInt(((parseInt($(priceHtml).val() , 10) * (result[item]['valorBancada'] / 10)) / (1 - (result[item]['porcentagemBancadaTrinta']/100))), 10) 
+        let itemValue = parseInt(((parseInt($(priceHtml).val() , 10) * (result[item]['valorBancada'] / 10)) / valuePorcent), 10) 
         console.log(result[item]['nomeItemResumido'])
         console.log(isNaN(itemValue))
         if (!isNaN(itemValue)) {
