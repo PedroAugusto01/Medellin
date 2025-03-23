@@ -55,233 +55,16 @@
         <!-- Table items Start -->
         <div class="container-fluid mb-5 wow fadeIn" data-wow-delay="0.1s"
             style="padding: 35px; width:50%; margin:0 auto;">
-            <div class="container">
-                <div class="row g-2">
-                    <div class="col-md-10">
-                        <div class="row g-2">
-                            <div class="container-fluid mb-5 wow fadeIn" style="right: 35px;">
-                                <table id="t">
-                                    <thead>
-                                        <tr>
-                                            <th>Munição</th>
-                                            <th>Qtd. Farm</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>M-FAL</td>
-                                            <td><p id="table_fal">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-G36</td>
-                                            <td><p id="table_g36">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-HK</td>
-                                            <td><p id="table_hk">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-M4A4</td>
-                                            <td><p id="table_m4a4">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-MTAR21</td>
-                                            <td><p id="table_mtar">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-AK47 ADD</td>
-                                            <td><p id="table_ak47">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-NAVY</td>
-                                            <td><p id="table_navy">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-MACHINE TEC-9</td>
-                                            <td><p id="table_machine">0</p></td>
-                                        </tr>
-                                        <tr>
-                                            <td>M-FIVE</td>
-                                            <td><p id="table_five">0</p></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="bancadaItensTable" class="container"> 
             </div>
         </div>
         <!-- Table items End -->
 
-        <div class="dbgOuter" style="padding: 25px;">
-            <div class="dbgCont">
-                <input class="cb" name="20" type="checkbox" id="opt0" onchange="cbChange(this)" />
-                <label for="dbgMembro">Membro - 20%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" name="15" type="checkbox" id="opt1" onchange="cbChange(this)" />
-                <label for="dbgMembro">Membro - 15%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" type="checkbox" name="10" id="opt2" onchange="cbChange(this)" />
-                <label for="dbgRecrutador">Recrutador - 10%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" type="checkbox" name="8" id="opt3" onchange="cbChange(this)" />
-                <label for="dbgElite">Elite - 8%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" type="checkbox" name="5" id="opt4" onchange="cbChange(this)" />
-                <label for="dbgGerente">Gerente - 5%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" type="checkbox" name="3" id="opt5" onchange="cbChange(this)" />
-                <label for="dbgSublider">Sub-Lider - 3%</label>
-            </div>
-            <div class="dbgCont">
-                <input class="cb" type="checkbox" name="0" id="opt6" onchange="cbChange(this)" />
-                <label for="dbgLider">Lider - 0%</label>
-            </div>
-            <p id="text" style="display:block">Valor selecionado: NULL</p>
+        <div id="porcentTable" class="dbgOuter" style="padding: 25px;"> 
         </div>
 
-        <div class="dbgOuter" style="padding: 30px;">
-            <div class="dbgCont" style="width: 100%;">
-                <div class="container mt-4">
-                    <div class="row">
-                        <div class="col-6 row-heading">
-                            Item
-                        </div>
-                        <div class="col-3 row-heading">
-                            Quantidade de farm
-                        </div>
-                        <div class="col-2 row-heading">
-                            Mun. a ser produzida
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            M-FAL
-                        </div>
-                        <div class="col-3">
-                            <input type="number" value="0" class="farm" id="qty_fal" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_fal" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-G36
-                        </div>
-                        <div class="col-3">
-                            <input type="number" value="0" class="farm" id="qty_g36" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_g36" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-HK
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_hk" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_hk" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-M4A4
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_m4a4" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_m4a4" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-MTAR21
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_mtar" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_mtar" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-AK47 ADD
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_ak47" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_ak47" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-NAVY
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_navy" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_navy" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-MACHINE TEC-9
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_machine" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_machine" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6">
-                            M-FIVE
-                        </div>
-                        <div class="col-3">
-                            <input type="number" class="farm" value="0" id="qty_five" style="width: 70%; text-align: center;" oninput="calculateTotal(true)"/>
-                        </div>
-                        <div class="col-2">
-                            <input type="number" class="muni" value="0" id="price_five" style="width: 100%; text-align: center;" oninput="calculateTotal(false)"/>
-                        </div>
-                    </div>
-
-                    <div class="row my-3">
-                        <div class="col-6 text-right total">
-                            Total
-                        </div>
-                        <div class="col-3 total-val">
-                            <span id="total_value_farm">0</span>
-                        </div>
-                        <div class="col-2 total-val">
-                            <span id="total_value_muni">0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="calcTable" class="dbgOuter" style="padding: 30px;">
+            
         </div>
     </div>
 </body>
@@ -323,6 +106,7 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+<script src="js/bancadaTable.js"></script>
 <script src="js/Static elements/navBar.js"></script>
 </body>
 
