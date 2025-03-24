@@ -32,16 +32,16 @@ function createTable(json) {
     json.forEach(item => {
         table += `
             <div class="row my-3">
-                <div class="col-5 table-row">
+                <div class="col-2">
                     ${item.nomeItemCompleto} (Min= R$ ${item.valorMinimoVenda} | Max= R$ ${item.valorMaximovenda})
                 </div>
-                <div class="col-3 table-row">
+                <div class="col-3">
                     <input type="number" class="price input-style" value="${item.valorMinimoVenda.replace(/[.]/g, '')}" id="price_${item.nomeItemResumido}" oninput="calculateTotal()"/>
                 </div>
-                <div class="col-2 table-row">
+                <div class="col-3">
                     <input type="number" class="muni input-style" value="0" id="qtd_${item.nomeItemResumido}" oninput="calculateTotal()"/>
                 </div>
-                <div class="col-2 table-row">
+                <div class="col-3">
                     <label id="total_${item.nomeItemResumido}" class="total-val">R$ 0,00</label>
                 </div>
             </div>
@@ -49,10 +49,11 @@ function createTable(json) {
     });
 
     table += `
-        <div class="row table-footer">
-            <div class="col-6 text-end total">Total</div>
-            <div class="col-3 total-val"><span id="total_value_quantidade">0</span></div>
-            <div class="col-3 total-val"><span id="total_value">R$ 0,00</span></div>
+        <div class="row table-header">
+            <div class="col-2">Total</div>
+            <div class="col-3"></div>
+            <div class="col-3"><span id="total_value_quantidade">0</span></div>
+            <div class="col-3"><span id="total_value">R$ 0,00</span></div>
         </div>
         </div>
     </div>`;
