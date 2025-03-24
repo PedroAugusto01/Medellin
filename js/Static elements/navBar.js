@@ -11,7 +11,7 @@ const header= `
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto">
             <a href="index.html" class="nav-item nav-link active">Calc. Vendas</a>
-            <a href="calcBancada.html" class="nav-item nav-link">Calc. Bancada 30%</a>
+            <a href="calcBancada30.html" class="nav-item nav-link">Calc. Bancada 30%</a>
             <a href="calcBancada0.html" class="nav-item nav-link">Calc. Bancada 0%</a>
             <!-- <a href="" class="nav-item nav-link">Entrega de farm</a> -->
             <a href="https://discord.gg/r9aEVxp2KT" class="nav-item nav-link">Discord</a>
