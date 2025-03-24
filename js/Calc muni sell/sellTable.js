@@ -22,7 +22,7 @@ function createTable(json) {
         <div class="dbgCont" style="width: 100%; grid-auto-rows: auto;">
             <div class="container mt-4">
                 <div class="row table-header">
-                    <div class="col-2">Item</div>
+                    <div class="col-3">Item</div>
                     <div class="col-3">Valor</div>
                     <div class="col-3">Quantidade</div>
                     <div class="col-3">Total</div>
@@ -32,7 +32,7 @@ function createTable(json) {
     json.forEach(item => {
         table += `
             <div class="row my-3">
-                <div class="col-2">
+                <div class="col-3">
                     ${item.nomeItemCompleto} (Min= R$ ${item.valorMinimoVenda} | Max= R$ ${item.valorMaximovenda})
                 </div>
                 <div class="col-3">
@@ -50,7 +50,7 @@ function createTable(json) {
 
     table += `
         <div class="row table-header">
-            <div class="col-2">Total</div>
+            <div class="col-3">Total</div>
             <div class="col-3"></div>
             <div class="col-3"><span id="total_value_quantidade">0</span></div>
             <div class="col-3"><span id="total_value">R$ 0,00</span></div>
