@@ -1,16 +1,25 @@
-async function getData() {
-    const url = "https://rsbuk2s0od.execute-api.us-east-1.amazonaws.com/v1/getItem?login=true";
+async function loginUser(login, senha) {
+    const url = "https://rsbuk2s0od.execute-api.us-east-1.amazonaws.com/v1/getItem?login=true";  // Nova URL para autenticação
     try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
+        // Requisição POST
+        let body = {
+            login: login,
+            senha: senha
         }
 
-        const json = await response.json();
-        return json;
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body)  // Usando JSON.stringify aqui
+        });
+
+        const responseData = await response.json();
+        return responseData
     } catch (error) {
-        console.error(error.message);
-        return [];
+        console.error("Erro ao enviar dados:", error);
+        alert("Ocorreu um erro ao salvar os dados.");
     }
 }
 
@@ -20,14 +29,11 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const login = document.getElementById("login").value;
     const senha = document.getElementById("senha").value;
 
-    const users = await getData();
-
-    const user = users.find(user => user.login === login && user.senha === senha);
-
-    if (user) {
+    const result = await loginUser(login, senha);
+    if (result['login'] == "true") {
         alert("Login bem-sucedido!");
-        localStorage.setItem("authenticated", "true");  // Armazenando informação no localStorage
-        window.location.href = "changeData.html";  // Redirecionando para a página changeData.html
+        localStorage.setItem("authenticated", "true");
+        window.location.href = "changeData.html";
     } else {
         document.getElementById("error-message").style.display = "block";
     }
