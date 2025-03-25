@@ -25,7 +25,7 @@ const navbarContent = `
                     </div>
                 </div>
             </div>
-            <a href="changeData.html" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+            <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
         </div>
     </div>
 </nav>

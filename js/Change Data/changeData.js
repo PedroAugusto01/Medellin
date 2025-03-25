@@ -1,32 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "https://rsbuk2s0od.execute-api.us-east-1.amazonaws.com/v1/getItem?authorization=q8zNngJFQ31MFd5ZIFzni3T1hDEgTfyb1vTlZRKf";
+document.addEventListener("DOMContentLoaded", async () => {
+    const apiUrl = "https://rsbuk2s0od.execute-api.us-east-1.amazonaws.com/v1/getItem?login=false";
 
-    fetch(apiUrl, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        }
-    })
-    .then(response => {
+    try {
+        const response = await fetch(apiUrl);
         if (!response.ok) {
-            throw new Error(`Erro HTTP: ${response.status}`);
+            throw new Error(`Response status: ${response.status}`);
         }
-        return response.json();
-    })
-    .then(responseData => {
-        const data = JSON.parse(responseData.body);
 
-        if (!data || data.length === 0) {
-            console.warn("Nenhum dado recebido da API.");
-            return;
+        const json = await response.json();
+        const data = json
+
+        if (!Array.isArray(data) || data.length === 0) {
+            throw new Error("Nenhum dado disponível.");
         }
 
         const tabelaHead = document.getElementById("tabela-head");
         const tabelaItens = document.getElementById("tabela-itens");
 
         if (typeof data[0] !== "object" || data[0] === null) {
-            console.error("Os dados recebidos não são válidos.");
-            return;
+            throw new Error("Os dados recebidos não são válidos.");
         }
 
         // Criar cabeçalhos dinamicamente
@@ -55,8 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
             row.innerHTML = rowHTML;
             tabelaItens.appendChild(row);
         });
-    })
-    .catch(error => console.error("Erro ao buscar dados:", error));
+    } catch (error) {
+        console.error(error.message);
+    }
 
     // Evento para salvar todos os itens
     document.getElementById("salvar-tudo").addEventListener("click", async () => {
@@ -98,14 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            let jsonPayLoad = JSON.stringify(dadosParaEnviar)
-            // Requisição OPTIONS (CORS Preflight)
-            await fetch(apiUrl, {
-                method: "OPTIONS",
-                headers: {
-                    "Content-Type": "application/json",
-                }
-            });
+            let jsonPayLoad = JSON.stringify(dadosParaEnviar);
 
             // Requisição POST
             const response = await fetch(apiUrl, {
@@ -113,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: new TextEncoder("utf-8").encode(JSON.stringify(dadosParaEnviar)) // Usando JSON.stringify aqui
+                body: jsonPayLoad,  // Usando JSON.stringify aqui
             });
-            
+
             const responseData = await response.json();
 
             if (response.ok) {

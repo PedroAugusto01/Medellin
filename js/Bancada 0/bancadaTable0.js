@@ -1,5 +1,5 @@
 async function getData() {
-    const url = "https://3pbarwrn5jwlnue3nrebdco4u40dedtv.lambda-url.us-east-1.on.aws";
+    const url = "https://rsbuk2s0od.execute-api.us-east-1.amazonaws.com/v1/getItem?login=false";
 
     try {
         const response = await fetch(url);
