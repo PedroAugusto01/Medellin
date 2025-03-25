@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         const json = await response.json();
-        const data = json
+        const data = json;
 
         if (!Array.isArray(data) || data.length === 0) {
             throw new Error("Nenhum dado disponível.");
@@ -38,9 +38,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             let rowHTML = "";
             colunas.forEach(coluna => {
+                let valor = item[coluna];
+
+                // Apenas para "valorMinimoVenda" e "valorMaximoVenda", garantir três casas decimais
+                if ((coluna === "valorMinimoVenda" || coluna === "valorMaximoVenda") && !isNaN(valor) && valor !== "") {
+                    valor = Number(valor).toFixed(3);
+                }
+
                 rowHTML += `
                     <td>
-                        <input type="text" class="input-style" value="${item[coluna]}" id="${coluna}-${item.idItem}">
+                        <input type="text" class="input-style" value="${valor}" id="${coluna}-${item.idItem}">
                     </td>`;
             });
 
@@ -73,9 +80,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 } else {
                     input.style.border = "1px solid #ddd";
                     
-                    // Se o valor for numérico, converta para número
-                    if (!isNaN(value) && value !== "") {
-                        value = parseFloat(value);  // Converte para número
+                    // Aplicar a formatação de três casas decimais APENAS para os campos desejados
+                    if ((key === "valorMinimoVenda" || key === "valorMaximoVenda") && !isNaN(value) && value !== "") {
+                        value = Number(value).toFixed(3);  
                     }
 
                     payload[key] = value;

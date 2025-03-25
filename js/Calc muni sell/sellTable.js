@@ -33,7 +33,7 @@ function createTable(json) {
         table += `
             <div class="row my-3">
                 <div class="col-3">
-                    ${item.nomeItemCompleto} (Min= R$ ${item.valorMinimoVenda} | Max= R$ ${item.valorMaximovenda})
+                    ${item.nomeItemCompleto} (Min= R$ ${item.valorMinimoVenda} | Max= R$ ${item.valorMaximoVenda})
                 </div>
                 <div class="col-3">
                     <input type="number" class="price input-style" value="${item.valorMinimoVenda.replace(/[.]/g, '')}" id="price_${item.nomeItemResumido}" oninput="calculateTotal()"/>

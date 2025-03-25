@@ -24,8 +24,8 @@ const navbarContent = `
                         <a href="#" class="dropdown-item">Opção 3</a>
                     </div>
                 </div>
+                <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
             </div>
-            <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
         </div>
     </div>
 </nav>
